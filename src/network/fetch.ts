@@ -6,7 +6,4 @@ const ACCESS_TOKEN =
 export const fetchApi = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
   headers: {Authorization: `Bearer ${ACCESS_TOKEN}`},
-  params: {
-    language: 'en-US',
-  },
 });

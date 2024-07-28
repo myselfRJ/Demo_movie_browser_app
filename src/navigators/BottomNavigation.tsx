@@ -27,7 +27,7 @@ const BottomNavigation: React.FC = () => {
       }}>
       <Tab.Screen
         name="NowPlayingScreen"
-        children={() => <HomeScreen screenType="Nowplaying" />}
+        children={() => <HomeScreen screenType="nowPlaying" />}
         options={{
           tabBarLabel: 'Now Playing',
           tabBarIcon: () => {
@@ -37,7 +37,7 @@ const BottomNavigation: React.FC = () => {
       />
       <Tab.Screen
         name="PopularScreen"
-        children={() => <HomeScreen screenType="Popular" />}
+        children={() => <HomeScreen screenType="popular" />}
         options={{
           tabBarLabel: 'Popular',
           tabBarIcon: () => {
@@ -47,7 +47,7 @@ const BottomNavigation: React.FC = () => {
       />
       <Tab.Screen
         name="TopRatedScreen"
-        children={() => <HomeScreen screenType="Toprated" />}
+        children={() => <HomeScreen screenType="topRated" />}
         options={{
           tabBarLabel: 'Top-Rated',
           tabBarIcon: () => {
@@ -57,7 +57,7 @@ const BottomNavigation: React.FC = () => {
       />
       <Tab.Screen
         name="UpcomingScreen"
-        children={() => <HomeScreen screenType="Upcoming" />}
+        children={() => <HomeScreen screenType="upcoming" />}
         options={{
           tabBarLabel: 'Upcoming',
           tabBarIcon: () => {

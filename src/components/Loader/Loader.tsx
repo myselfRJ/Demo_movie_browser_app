@@ -6,7 +6,7 @@ import {styles} from './styles';
 const Loader: React.FC = () => {
   return (
     <View style={styles.container}>
-      <ActivityIndicator size={100} />
+      <ActivityIndicator size={60} />
     </View>
   );
 };

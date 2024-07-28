@@ -12,10 +12,7 @@ import {GestureHandlerRootView, ScrollView} from 'react-native-gesture-handler';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import BottomNavigator from './src/navigators/BottomNavigation';
 import {NavigationContainer} from '@react-navigation/native';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
+import RootNavigation from './src/navigators/RootNavigation';
 
 function App(): React.JSX.Element {
   const backgroundStyle = {
@@ -23,18 +20,19 @@ function App(): React.JSX.Element {
   };
 
   return (
-    <SafeAreaView
-      style={{backgroundColor: backgroundStyle.backgroundColor, flex: 1}}>
-      <StatusBar
-        barStyle={'light-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <GestureHandlerRootView style={{flex: 1}}>
+    <GestureHandlerRootView style={{flex: 1}}>
+      <SafeAreaView
+        style={{backgroundColor: backgroundStyle.backgroundColor, flex: 1}}>
+        <StatusBar
+          barStyle={'light-content'}
+          backgroundColor={backgroundStyle.backgroundColor}
+        />
+
         <NavigationContainer>
-          <BottomNavigator />
+          <RootNavigation />
         </NavigationContainer>
-      </GestureHandlerRootView>
-    </SafeAreaView>
+      </SafeAreaView>
+    </GestureHandlerRootView>
   );
 }
 
